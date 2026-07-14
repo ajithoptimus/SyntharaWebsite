@@ -3,8 +3,11 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Terminal } from "lucide-react";
+import { useTerminal } from "@/context/TerminalContext";
 
 export default function Navbar() {
+  const { openTerminal } = useTerminal();
+
   return (
     <motion.nav 
       initial={{ y: -20, opacity: 0 }}
@@ -32,7 +35,10 @@ export default function Navbar() {
         </div>
 
         {/* CTA Button */}
-        <button className="flex items-center gap-2 px-5 py-2.5 font-mono text-sm border border-neon-cyan text-neon-cyan hover:bg-neon-cyan/10 transition-colors border-glow-hover group">
+        <button 
+          onClick={openTerminal}
+          className="flex items-center gap-2 px-5 py-2.5 font-mono text-sm border border-neon-cyan text-neon-cyan hover:bg-neon-cyan/10 transition-colors border-glow-hover group"
+        >
           <Terminal className="w-4 h-4 group-hover:animate-pulse" />
           INIT_CONNECTION
         </button>

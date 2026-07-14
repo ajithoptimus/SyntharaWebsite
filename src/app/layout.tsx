@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { TerminalProvider } from "@/context/TerminalContext";
+import TerminalOverlay from "@/components/TerminalOverlay";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -27,7 +29,12 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="min-h-full flex flex-col font-sans">
+        <TerminalProvider>
+          {children}
+          <TerminalOverlay />
+        </TerminalProvider>
+      </body>
     </html>
   );
 }

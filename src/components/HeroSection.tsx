@@ -2,8 +2,11 @@
 
 import { motion } from "framer-motion";
 import { Terminal, ArrowRight } from "lucide-react";
+import { useTerminal } from "@/context/TerminalContext";
 
 export default function HeroSection() {
+  const { openTerminal } = useTerminal();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Background Orbs */}
@@ -58,7 +61,10 @@ export default function HeroSection() {
             <ArrowRight className="w-5 h-5" />
           </button>
           
-          <button className="flex items-center gap-2 px-8 py-4 font-mono text-neon-cyan border border-neon-cyan/50 hover:bg-neon-cyan/10 border-glow-hover transition-all">
+          <button 
+            onClick={openTerminal}
+            className="flex items-center gap-2 px-8 py-4 font-mono text-neon-cyan border border-neon-cyan/50 hover:bg-neon-cyan/10 border-glow-hover transition-all"
+          >
             <Terminal className="w-5 h-5" />
             ./view_whitepaper.sh
           </button>
