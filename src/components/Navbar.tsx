@@ -29,6 +29,7 @@ export default function Navbar() {
 
         {/* Links */}
         <div className="hidden md:flex items-center gap-8 font-mono text-sm text-gray-400">
+          <Link href="/engines" className="text-neon-cyan hover:text-white transition-colors">[Engines_Hub]</Link>
           <Link href="/architecture" className="hover:text-neon-cyan transition-colors">/architecture</Link>
           <Link href="/deployments" className="hover:text-neon-cyan transition-colors">/deployments</Link>
           <Link href="/investor-relations" className="hover:text-neon-cyan transition-colors">/investor-relations</Link>
