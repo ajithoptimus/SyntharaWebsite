@@ -29,9 +29,11 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">
+      <body className="min-h-full w-full flex flex-col font-sans overflow-x-hidden">
         <TerminalProvider>
-          {children}
+          <div className="flex-grow w-full flex flex-col">
+            {children}
+          </div>
           <TerminalOverlay />
         </TerminalProvider>
       </body>

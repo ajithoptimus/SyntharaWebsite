@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen selection:bg-neon-cyan/30 selection:text-white">
+    <main className="relative w-full overflow-hidden min-h-screen selection:bg-neon-cyan/30 selection:text-white">
       {/* Global Background Grid is handled in globals.css */}
       <Navbar />
       <HeroSection />

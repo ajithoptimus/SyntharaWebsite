@@ -8,12 +8,12 @@ export default function HeroSection() {
   const { openTerminal } = useTerminal();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <section className="relative w-full min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Background Orbs */}
       <div className="glow-orb w-[600px] h-[600px] bg-neon-cyan/20 top-1/4 -left-32 animate-float" />
       <div className="glow-orb w-[500px] h-[500px] bg-accent-purple/20 bottom-1/4 -right-32 animate-float" style={{ animationDelay: "3s" }} />
 
-      <div className="max-w-5xl mx-auto px-6 z-10 text-center">
+      <div className="w-full max-w-5xl mx-auto px-6 z-10 text-center">
         
         {/* Status Badge */}
         <motion.div 

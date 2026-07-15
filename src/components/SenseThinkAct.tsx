@@ -54,8 +54,8 @@ const itemVariants = {
 
 export default function SenseThinkAct() {
   return (
-    <section className="py-32 relative z-10">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-32 relative z-10 w-full">
+      <div className="w-full max-w-7xl mx-auto px-6">
         
         <div className="text-center mb-20">
           <span className="font-mono text-neon-cyan text-sm tracking-widest uppercase mb-4 block">

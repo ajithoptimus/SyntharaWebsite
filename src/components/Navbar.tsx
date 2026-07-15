@@ -13,9 +13,9 @@ export default function Navbar() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-white/10"
+      className="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-white/10 w-full"
     >
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div className="w-full max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         
         {/* Logo Area */}
         <div className="flex items-center gap-4">

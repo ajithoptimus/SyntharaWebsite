@@ -50,8 +50,8 @@ export default function Deployments() {
   const [activeNode, setActiveNode] = useState(nodes[0]);
 
   return (
-    <section className="py-24 relative">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-24 relative w-full">
+      <div className="w-full max-w-7xl mx-auto px-6">
         
         <div className="mb-16">
           <h2 className="text-3xl font-mono font-bold text-white uppercase flex items-center gap-4">
