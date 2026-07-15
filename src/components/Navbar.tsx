@@ -18,14 +18,14 @@ export default function Navbar() {
       <div className="w-full max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         
         {/* Logo Area */}
-        <div className="flex items-center gap-4">
-          <div className="w-10 h-10 flex items-center justify-center border border-neon-cyan box-glow-cyan bg-black/50">
-            <span className="font-mono text-neon-cyan font-bold text-xl">S</span>
+        <Link href="/" className="flex items-center gap-4 group cursor-pointer">
+          <div className="w-10 h-10 flex items-center justify-center border border-neon-cyan box-glow-cyan bg-black/50 group-hover:bg-neon-cyan/10 transition-colors">
+            <span className="font-mono text-neon-cyan font-bold text-xl group-hover:animate-pulse">S</span>
           </div>
-          <span className="font-mono text-white tracking-[0.3em] font-medium text-sm hidden sm:block">
+          <span className="font-mono text-white tracking-[0.3em] font-medium text-sm hidden sm:block group-hover:text-neon-cyan transition-colors">
             SYNTHARASIGHT
           </span>
-        </div>
+        </Link>
 
         {/* Links */}
         <div className="hidden md:flex items-center gap-8 font-mono text-sm text-gray-400">
