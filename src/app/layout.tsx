@@ -16,7 +16,30 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Syntharasight | Command Center",
-  description: "Synthetic Intelligence for Physical Creation. Deep-Tech orchestration engine.",
+  description: "Synthetic Intelligence for Physical Creation. Deep-Tech orchestration engine replacing traditional 'Produce & Pray' manufacturing with a predictive Sense-Think-Act loop.",
+  keywords: ["Deep-Tech", "AI", "Manufacturing", "Supply Chain", "Edge AI", "Orchestration", "Zero-Inventory", "Syntharasight"],
+  openGraph: {
+    title: "Syntharasight | Command Center",
+    description: "Synthetic Intelligence for Physical Creation. Deep-Tech orchestration engine.",
+    url: "https://syntharasight.com",
+    siteName: "Syntharasight",
+    images: [
+      {
+        url: "/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Syntharasight Command Center Dashboard",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Syntharasight | Command Center",
+    description: "Synthetic Intelligence for Physical Creation. Deep-Tech orchestration engine.",
+    images: ["/opengraph-image.png"],
+  },
 };
 
 export default function RootLayout({
