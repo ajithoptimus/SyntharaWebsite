@@ -40,6 +40,16 @@ export const metadata: Metadata = {
     description: "Synthetic Intelligence for Physical Creation. Deep-Tech orchestration engine.",
     images: ["/opengraph-image.png"],
   },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
 };
 
 export default function RootLayout({
