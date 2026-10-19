@@ -2,11 +2,20 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Terminal } from "lucide-react";
 import { useTerminal } from "@/context/TerminalContext";
 
+const navLinks = [
+  { href: "/engines", label: "[Engines_Hub]" },
+  { href: "/architecture", label: "/architecture" },
+  { href: "/deployments", label: "/deployments" },
+  { href: "/investor-relations", label: "/investor-relations" },
+];
+
 export default function Navbar() {
   const { openTerminal } = useTerminal();
+  const pathname = usePathname();
 
   return (
     <motion.nav 
@@ -28,11 +37,23 @@ export default function Navbar() {
         </Link>
 
         {/* Links */}
-        <div className="hidden md:flex items-center gap-8 font-mono text-sm text-gray-400">
-          <Link href="/engines" className="text-neon-cyan hover:text-white transition-colors">[Engines_Hub]</Link>
-          <Link href="/architecture" className="hover:text-neon-cyan transition-colors">/architecture</Link>
-          <Link href="/deployments" className="hover:text-neon-cyan transition-colors">/deployments</Link>
-          <Link href="/investor-relations" className="hover:text-neon-cyan transition-colors">/investor-relations</Link>
+        <div className="hidden md:flex items-center gap-8 font-mono text-sm">
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`transition-all duration-200 ${
+                  isActive
+                    ? "text-neon-cyan font-semibold drop-shadow-[0_0_8px_rgba(0,240,255,0.7)]"
+                    : "text-gray-400 hover:text-white"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </div>
 
         {/* CTA Button */}

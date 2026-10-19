@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Terminal, ArrowRight } from "lucide-react";
 import { useTerminal } from "@/context/TerminalContext";
 
@@ -56,10 +57,13 @@ export default function HeroSection() {
           transition={{ duration: 0.5, delay: 0.8 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-6"
         >
-          <button className="flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-none hover:scale-105 transition-transform">
+          <Link 
+            href="/architecture"
+            className="flex items-center gap-2 px-8 py-4 bg-white text-black font-semibold rounded-none hover:scale-105 transition-transform cursor-pointer"
+          >
             Explore Architecture
             <ArrowRight className="w-5 h-5" />
-          </button>
+          </Link>
           
           <button 
             onClick={openTerminal}
