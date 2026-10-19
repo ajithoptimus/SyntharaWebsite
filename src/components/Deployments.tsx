@@ -43,6 +43,16 @@ const nodes = [
     statusDot: "bg-accent-purple animate-pulse",
     desc: "Event-driven apparel manufacturing. Routes designs to MSMEs strictly based on predictive sentiment analysis.",
     accent: "border-accent-purple",
+  },
+  {
+    id: "synthara-books",
+    name: "Synthara Books",
+    sector: "Regional Media Localization",
+    status: "ACTIVE",
+    statusColor: "text-paddy-green",
+    statusDot: "bg-paddy-green animate-pulse",
+    desc: "An automated, context-locked AI processing engine that localizes global literature into high-demand regional Indian scripts. Driven by a multi-tier pipeline combining Claude Sonnet 5.5 on Amazon Bedrock for literary translation and Gemini Flash for automated Unicode QA filtering, entirely eliminating inventory risk via integrated Print-on-Demand (POD) logistics.",
+    accent: "border-paddy-green",
   }
 ];
 
